@@ -59,7 +59,7 @@ class S3DISConfig(Config):
     dataset_task = ''
 
     # Number of CPU threads for the input pipeline
-    input_threads = 10
+    input_threads = 32
 
     #########################
     # Architecture definition
@@ -94,7 +94,7 @@ class S3DISConfig(Config):
     ###################
 
     # Radius of the input sphere
-    in_radius = 1.5
+    in_radius = 0.5
 
     # Number of kernel points
     num_kernel_points = 15

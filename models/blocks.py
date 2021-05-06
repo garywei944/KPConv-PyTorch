@@ -452,11 +452,13 @@ class BatchNormBlock(nn.Module):
     def forward(self, x):
         if self.use_bn:
 
-            x = x.unsqueeze(2)
+            a, b = x.shape
+            x = x.reshape((a, b, 1))
             x = x.transpose(0, 2)
-            x = self.batch_norm(x)
+            if a > 1:
+                x = self.batch_norm(x)
             x = x.transpose(0, 2)
-            return x.squeeze()
+            return x.reshape(a, b)
         else:
             return x + self.bias
 

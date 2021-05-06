@@ -1,0 +1,16 @@
+name: kpconv
+channels:
+  - pytorch
+  - defaults
+dependencies:
+  - python=3
+  - numpy
+  - scikit-learn
+  - pyyaml
+  - matplotlib
+  - mayavi
+  - pyqt
+  - pytorch
+  - torchvision
+  - torchaudio
+  - cudatoolkit=11.0
